@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 const Request = require("request");
 
-
 router.get('/', function (req, res) {
   var username = req.query.username;
   var options = {
