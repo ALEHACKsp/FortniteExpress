@@ -8,7 +8,7 @@ router.get('/', function (req, res) {
       url: `https://api.fortnitetracker.com/v1/profile/account/${accountID}/matches`,
       method: 'GET',
       headers: {
-        "TRN-Api-Key": "f92be6be-cb17-43c7-96e5-6a442ab5b65e"
+        "TRN-Api-Key": process.env.REST_TRACKER
       }
     };
       Request.get(options, (error, response,  body) => {
