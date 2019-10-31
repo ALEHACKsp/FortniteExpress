@@ -12,7 +12,6 @@ let connectionsCount;
 var connections = [];
 var id;
 
-
 wss.on("connection", function connection(ws, req) {
   id = req.headers["sec-websocket-key"];
   connections.push({ wsId: id });
@@ -24,26 +23,15 @@ wss.on("connection", function connection(ws, req) {
     ws.send(connectionsCount);
   }, 800);
 
+  setInterval(() => {
+    data = JSON.parse(connections);
+    ws.send(data);
+  }, 800);
 
   // ws.on('open', function open() {
-  //   const array = new Float32Array(5);
-   
-  //   for (var i = 0; i < array.length; ++i) {
-  //     array[i] = i / 2;
-  //   }
-   
-  //   ws.send(array);
   // });
 
-
   ws.on("message", function incoming(data) {
-
-    // var r = JSON.parse(data),
-    //   payload = r.payload;
-      // connections[connectionIndex(id)].name = data.name;
-      // console.log(connections);
-      // console.log("blank joined the game, having id blank"),
-
     // collect message history to send over get("/") request on componentdidmount
     data1 = JSON.parse(data);
     previousHistory.push(data1);
