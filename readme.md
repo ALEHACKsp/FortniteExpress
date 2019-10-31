@@ -9,6 +9,8 @@ npm start
 
 Hosted on AWS Elastic Beanstalk
 
+eb deploy FortniteExpress-dev
+
 Has own subdomain
 
 ## File Structure

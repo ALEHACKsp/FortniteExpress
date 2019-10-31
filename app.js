@@ -35,7 +35,7 @@ app.use('/', indexRouter);
 app.use('/api/store', storeRouter);
 app.use('/api/stats', statsRouter);
 app.use('/api/history', historyRouter);
-app.use('/chat', chatRouter);
+app.use('/api/chat', chatRouter);
 
 
 // catch 404 and forward to error handler

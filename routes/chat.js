@@ -23,10 +23,10 @@ wss.on("connection", function connection(ws, req) {
     ws.send(connectionsCount);
   }, 800);
 
-  setInterval(() => {
-    data = JSON.parse(connections);
-    ws.send(data);
-  }, 800);
+  // setInterval(() => {
+  //   data = JSON.parse(connections);
+  //   ws.send(data);
+  // }, 800);
 
   // ws.on('open', function open() {
   // });
