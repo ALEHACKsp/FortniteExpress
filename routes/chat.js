@@ -2,12 +2,12 @@ var express = require("express");
 var router = express.Router();
 const Request = require("request");
 
-const WebSocket = require("wss");
-const WebSocketServer = require("wss").Server;
+const WebSocket = require("ws");
+const WebSocketServer = require("ws").Server;
 wss = new WebSocket.Server({ port: 8090, clientTracking: true });
 
 let previousHistory = [];
-let connectionsCount;wss
+let connectionsCount;
 
 var connections = [];
 var id;
