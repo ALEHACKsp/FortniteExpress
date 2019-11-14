@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var storeRouter = require('./routes/store');
 var statsRouter = require('./routes/stats');
 var historyRouter = require('./routes/history');
-var chatRouter = require('./routes/chat');
+// var chatRouter = require('./routes/chat');
 
 
 const bodyParser = require('body-parser')
@@ -35,7 +35,7 @@ app.use('/', indexRouter);
 app.use('/api/store', storeRouter);
 app.use('/api/stats', statsRouter);
 app.use('/api/history', historyRouter);
-app.use('/api/chat', chatRouter);
+// app.use('/api/chat', chatRouter);
 
 
 // catch 404 and forward to error handler
